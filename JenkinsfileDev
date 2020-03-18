@@ -1,0 +1,10 @@
+@Library("cd-shared-code")_
+
+genericPipeline(
+    env: "dev",
+    applicationName: "survey-management",
+    clusterName: "cd-survey-management",
+    serviceName: "survey-management",
+    taskName: "tsk-cd-survey-management",
+    ecr: "652613197255.dkr.ecr.sa-east-1.amazonaws.com/desafio-cielo"
+)
