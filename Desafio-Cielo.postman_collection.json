@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "a490778b-32f7-444b-8e9d-ec3df00d2cda",
+		"name": "Desafio-Cielo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DesafioCieloPoll",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"teste1\",\n   \"title\":\"clubes\",\n   \"options\":[\n      {\n         \"description\":\"Palmeiras\"\n      },\n      {\n         \"description\":\"Flamengo\"\n      },\n      {\n         \"description\":\"São Paulo\"\n      }      \n   ],\n   \"startDate\":\"17/03/2020\",\n   \"endDate\":\"19/03/2020 23:59:59\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/poll",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"poll"
+					]
+				},
+				"description": "create poll"
+			},
+			"response": []
+		},
+		{
+			"name": "Vote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"teste4@gmail.com\",\n\t\"name\":\"vagner\",\n\t\"option\":2\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/poll/1/vote",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"poll",
+						"1",
+						"vote"
+					]
+				},
+				"description": "create person\ncount poll"
+			},
+			"response": []
+		},
+		{
+			"name": "listar estatistica",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"vagner\",\n\t\"password\":\"devdojo\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8090/poll/1/stats",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"poll",
+						"1",
+						"stats"
+					]
+				},
+				"description": "listar estatistica"
+			},
+			"response": []
+		},
+		{
+			"name": "findByIdPOLL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8090/poll/1/",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"poll",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
