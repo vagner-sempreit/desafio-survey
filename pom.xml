@@ -32,7 +32,7 @@
 
 		<fixture.factory.version>3.1.0</fixture.factory.version>
 		<power.mock.test>2.0.2</power.mock.test>
-		<commons-io.version>2.4</commons-io.version>
+		<commons-io.version>2.7</commons-io.version>
 		<apache.commons.collections.version>3.2.2</apache.commons.collections.version>
 	</properties>
 
